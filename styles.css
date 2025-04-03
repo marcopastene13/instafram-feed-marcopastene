@@ -1,0 +1,18 @@
+h1 {
+    display: flex;
+    font-size: 40px;;
+}
+.fa-instagram {
+    margin: 5px;
+    float: left;
+    font-size: 45px;
+}
+.nav-pill .nav-link{
+    color: grey;
+}
+.nav-pill .nav-link.active{
+    color: blue;
+}
+.btn btn-success {
+    justify-content: end;
+}

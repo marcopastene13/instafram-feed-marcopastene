@@ -1,0 +1,259 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--barranav-->
+    <nav class="navbar navbar-light bg-light py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fab fa-instagram fa-lg"></i>
+          <h1>Instagram</h1>
+        </a>
+        <!--boton trigger modal-->
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#botonmodal"
+        >
+          Create new post
+        </button>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--cuerpo modal-->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create new post</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Caption:</h6>
+            <textarea
+              class="form-control"
+              placeholder="Add the caption of your post here"
+              id="floatingTextarea2"
+            ></textarea>
+            <div class="row p-2">
+              <button class="col-1 border rounded p-1 m-1 btn-light">
+                <i class="fa-solid fa-camera"></i>
+              </button>
+              <button class="col-1 border rounded p-1 m-1 btn-light">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--grid toggle-->
+
+    <div class="container-fluid p-2">
+      <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+            ><i class="fa-solid fa-table-cells"></i
+          ></a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#profile"
+            type="button"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            ><i class="fa-solid fa-square"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <!--3 fotos-->
+        <div
+          class="tab-pane fade show active overflow-hidden"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <div class="row">
+            <div class="col-4 p-1">
+              <img
+                style="height: 28vw; object-fit: cover"
+                src="https://th.bing.com/th/id/R.c4d1b6376ad531c5440e7560e0e9a948?rik=b1y7VPOFxq4%2b%2fg&riu=http%3a%2f%2ftopcarconnection.com%2fwp-content%2fuploads%2f2018-Dodge-Challenger-SRT-Demon2.jpg&ehk=uo3qk858C8p4BxV%2f7SeRvKWred9kR2ETG8B1QoyXUB0%3d&risl=&pid=ImgRaw&r=0"
+                class="img-fluid w-100"
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                style="height: 28vw; object-fit: cover"
+                src="https://a.cdn-hotels.com/gdcs/production22/d560/d89b735d-4ed1-4c9f-bc13-c8785a10b4ff.jpg"
+                class="img-fluid w-100"
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                style="height: 28vw; object-fit: cover"
+                src="https://th.bing.com/th/id/R.620c7c1c15c1d48b40d66bafb258ccef?rik=1daFkP8jk6GICA&pid=ImgRaw&r=0"
+                class="img-fluid w-100"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 p-1">
+              <img
+                style="height: 28vw; object-fit: cover"
+                src="https://ds-images.bolavip.com/news/image?src=https:%2F%2Fimages.dalealbo.cl%2Fjpg%2Ffull%2FDLA_20240401_DLA_85878_arturo-vidal-grupo-colo-colo-copa-libertadores.jpg-scaled-e1710857197401.jpg&width=1200&height=740"
+                class="img-fluid w-100"
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                style="height: 28vw; object-fit: cover"
+                src="https://th.bing.com/th/id/R.5f5a82d85b54663836d77ce6f465051b?rik=CsxljPOxXFicFw&riu=http%3a%2f%2fwww.eje21.com.co%2fsite%2fwp-content%2fuploads%2f2020%2f10%2fcartagena-de-idias.-cortesia-procolombia.jpg&ehk=4FwTeiQ%2fzOeNMXalPWoh59996ZsPr1NNsiNmJY3hW2s%3d&risl=&pid=ImgRaw&r=0"
+                class="img-fluid w-100"
+              />
+            </div>
+            <div class="col-4 p-1">
+              <img
+                style="height: 28vw; object-fit: cover"
+                src="https://th.bing.com/th/id/R.0611704af4f53542a462b558c79b7be2?rik=wSLuYY35qg9mPw&riu=http%3a%2f%2fwww.138mph.com%2fwp-content%2fuploads%2f2017%2f03%2fRoger-Federer-pro.jpg&ehk=hl0DV2FaezbntIaeHDUr8TamhrWjV7mfVxMd9Q%2br37A%3d&risl=&pid=ImgRaw&r=0"
+                class="img-fluid w-100"
+              />
+            </div>
+          </div>
+        </div>
+        <!--1 foto-->
+        <div
+          class="tab-pane fade overflow-hidden"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <div class="row my-4">
+            <div class="col-6 mx-auto border p-0">
+              <div class="d-flex p-1">
+                <div class="w-100 fs-2">Mi Maquina</div>
+                <small class="aling-bottom">03/04</small>
+              </div>
+              <img
+                style="object-fit: cover"
+                src="https://th.bing.com/th/id/R.c4d1b6376ad531c5440e7560e0e9a948?rik=b1y7VPOFxq4%2b%2fg&riu=http%3a%2f%2ftopcarconnection.com%2fwp-content%2fuploads%2f2018-Dodge-Challenger-SRT-Demon2.jpg&ehk=uo3qk858C8p4BxV%2f7SeRvKWred9kR2ETG8B1QoyXUB0%3d&risl=&pid=ImgRaw&r=0"
+                class="img-fluid w-100"
+              />
+              <div class="p-2">
+                <strong>123 Likes</strong>
+                <p>Que maquina que tienes compa</p>
+              </div>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-6 mx-auto border p-0">
+              <div class="d-flex p-1">
+                <div class="w-100 fs-2">Vacaciones en Honolulu</div>
+                <small class="aling-bottom">08/01</small>
+              </div>
+              <img
+                style="object-fit: cover"
+                src="https://a.cdn-hotels.com/gdcs/production22/d560/d89b735d-4ed1-4c9f-bc13-c8785a10b4ff.jpg"
+                class="img-fluid w-100"
+              />
+              <div class="p-2">
+                <strong>543 Likes</strong>
+                <p>Bellisimo lugar!! <strong>#Honolulu</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-6 mx-auto border p-0">
+              <div class="d-flex p-1">
+                <div class="w-100 fs-2">Yorkies</div>
+                <small class="aling-bottom">08/01</small>
+              </div>
+              <img
+                style="object-fit: cover"
+                src="https://th.bing.com/th/id/R.620c7c1c15c1d48b40d66bafb258ccef?rik=1daFkP8jk6GICA&pid=ImgRaw&r=0"
+                class="img-fluid w-100"
+              />
+              <div class="p-2">
+                <strong>934 Likes</strong>
+                <p>Mi nueva camada de cachorritos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  </body>
+</html>
