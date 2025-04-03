@@ -15,21 +15,68 @@
   </head>
   <body>
     <!--barranav-->
-    <nav class="navbar navbar-light bg-light py-3">
+    <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <i class="fab fa-instagram fa-lg"></i>
-          <h1>Instagram</h1>
-        </a>
-        <!--boton trigger modal-->
-        <button
-          type="button"
-          class="btn btn-success"
-          data-bs-toggle="modal"
-          data-bs-target="#botonmodal"
+        <a class="navbar-brand"
+          ><i class="fa-brands fa-instagram"></i>Instagram</a
         >
-          Create new post
-        </button>
+        <form class="d-flex" role="search">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-success mx-2"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Create a new post
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                     Create a new post
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  Caption:
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                  </div>
+                
+                <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+              </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-success">
+                    Publish
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -53,58 +100,10 @@
             <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
           </ul>
         </div>
-      </div>
+      </form></div>
     </nav>
 
     <!--cuerpo modal-->
-
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Create new post</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <h6>Caption:</h6>
-            <textarea
-              class="form-control"
-              placeholder="Add the caption of your post here"
-              id="floatingTextarea2"
-            ></textarea>
-            <div class="row p-2">
-              <button class="col-1 border rounded p-1 m-1 btn-light">
-                <i class="fa-solid fa-camera"></i>
-              </button>
-              <button class="col-1 border rounded p-1 m-1 btn-light">
-                <i class="fa-solid fa-location-dot"></i>
-              </button>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-success">Publish</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!--grid toggle-->
 
@@ -120,8 +119,9 @@
             role="tab"
             aria-controls="home"
             aria-selected="true"
-            ><i class="fa-solid fa-table-cells"></i
-          ></a>
+          >
+            <i class="fa-solid fa-table-cells"></i>
+          </a>
         </li>
         <li class="nav-item" role="presentation">
           <a
@@ -133,8 +133,9 @@
             role="tab"
             aria-controls="profile"
             aria-selected="false"
-            ><i class="fa-solid fa-square"></i
-          ></a>
+          >
+            <i class="fa-solid fa-square"></i>
+          </a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
